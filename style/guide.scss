@@ -1,0 +1,65 @@
+.guide {
+    padding: 50px 0 90px;
+}
+
+.guide__list {
+    @include unstyled-list();
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+    margin: 0 auto;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 32%;
+        left: 0;
+        margin-top: -2.5px;
+        width: 100%;
+        border-top: 5px dashed $yellowColor;
+    }
+}
+
+.guide__item {
+    position: relative;
+    width: 140px;
+    padding-top: 170px;
+    text-align: center;
+    background: #fff;
+    font-size: 24px;
+    font-weight: 300;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -70px;
+        width: 140px;
+        height: 140px;
+        padding: 35px;
+        border: 5px solid $yellowColor;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-origin: content-box;
+    }
+
+    &--download::before {
+        background-image: url('../img/download.png');
+    }
+
+    &--design::before {
+        background-image: url('../img/design.png');
+    }
+
+    &--pay::before {
+        background-image: url('../img/pay.png');
+    }
+
+    &--get::before {
+        background-image: url('../img/get.png');
+    }
+}
